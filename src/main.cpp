@@ -6,10 +6,10 @@ using namespace std;
 
 int main() {
 	
-	Server serv;
+	Server serv(TCP);
 	serv._config();
-	future<void> f = async(std::launch::async,&Server::_bind,&serv);
-	//std::vector<int> vec;
+
+	future<void> f = async(std::launch::async,&Server::bindC,&serv);
 	
 	getchar();
 	system("pause");

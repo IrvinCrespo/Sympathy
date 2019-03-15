@@ -9,7 +9,6 @@ project(Sympathy)
     set(CMAKE_CXX_STANDARD_REQUIRED ON)
     message(STATUS "C++11 support has been enabled by default.")
 
-
 # files
 
 # include
@@ -24,6 +23,7 @@ add_executable( ${CMAKE_PROJECT_NAME}
 if(WIN32)
   target_link_libraries(${CMAKE_PROJECT_NAME} wsock32 ws2_32 pthread)
 endif()
+
 if (UNIX)
     target_link_libraries(${CMAKE_PROJECT_NAME} pthread)
 endif (UNIX)

@@ -2,6 +2,7 @@
 #define SERVER_H
 #include <iostream>
 #include <future>
+#include "../Client.h"
 
 #if	defined(_WIN32) || defined(_WIN64)
 	#include <winsock2.h>
@@ -16,7 +17,7 @@
 	#include <sys/socket.h>
 	#include <netinet/in.h> 
 #endif
-
+enum SOCKTYPE {TCP, UDP};
 class Server
 {	
 	private:
@@ -25,14 +26,29 @@ class Server
 			WSADATA wsaData; 
 		#endif
 		struct sockaddr_in addport,client;
-		void from_async();
+		void _configureTCP();
+		void _configureUDP();
+		void _close_socket();
+
+		template<int, typename S, char[], typename SS>
+		void _bindTCP(int,S,char[],SS);
+
+		template<int, typename S, char[], typename SS>
+		void _bindUDP(int,S,char[],SS);
+
+		
 		
 	public:
+		
 		Server();
+		Server(SOCKTYPE TYPE);
 		~Server();
-		void _config();
-		void _bind();
-		void _bindAsync();
+		void config();
+		void bindC();
+		void bindAsync();
+		
+		SOCKTYPE TYPE;
+		std::vector<Client> clients;
 
 	protected:
 };
