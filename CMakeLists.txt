@@ -22,8 +22,11 @@ add_executable( ${CMAKE_PROJECT_NAME}
 )
 
 if(WIN32)
-  target_link_libraries(${CMAKE_PROJECT_NAME} wsock32 ws2_32)
+  target_link_libraries(${CMAKE_PROJECT_NAME} wsock32 ws2_32 pthread)
 endif()
+if (UNIX)
+    target_link_libraries(${CMAKE_PROJECT_NAME} pthread)
+endif (UNIX)
 
 
 #install(TARGETS LS DESTINATION bin)
