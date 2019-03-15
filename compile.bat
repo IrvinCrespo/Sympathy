@@ -1,0 +1,3 @@
+echo Compiling...
+g++ main.cpp Server/*.cpp -lws2_32 -std=c++11
+echo Finished!
