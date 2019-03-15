@@ -59,45 +59,45 @@ RM = "C:/Program Files/CMake/bin/cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:/Users/dell/Documents/LS
+CMAKE_SOURCE_DIR = C:/Users/dell/Documents/Sympathy
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:/Users/dell/Documents/LS/build
+CMAKE_BINARY_DIR = C:/Users/dell/Documents/Sympathy/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/LS.dir
+# Target rules for target CMakeFiles/Sympathy.dir
 
 # All Build rule for target.
-CMakeFiles/LS.dir/all:
-	$(MAKE) -f CMakeFiles/LS.dir/build.make CMakeFiles/LS.dir/depend
-	$(MAKE) -f CMakeFiles/LS.dir/build.make CMakeFiles/LS.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:/Users/dell/Documents/LS/build/CMakeFiles --progress-num=1,2,3 "Built target LS"
-.PHONY : CMakeFiles/LS.dir/all
+CMakeFiles/Sympathy.dir/all:
+	$(MAKE) -f CMakeFiles/Sympathy.dir/build.make CMakeFiles/Sympathy.dir/depend
+	$(MAKE) -f CMakeFiles/Sympathy.dir/build.make CMakeFiles/Sympathy.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:/Users/dell/Documents/Sympathy/build/CMakeFiles --progress-num=1,2,3 "Built target Sympathy"
+.PHONY : CMakeFiles/Sympathy.dir/all
 
 # Include target in all.
-all: CMakeFiles/LS.dir/all
+all: CMakeFiles/Sympathy.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/LS.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/dell/Documents/LS/build/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/LS.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/dell/Documents/LS/build/CMakeFiles 0
-.PHONY : CMakeFiles/LS.dir/rule
+CMakeFiles/Sympathy.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/dell/Documents/Sympathy/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Sympathy.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/dell/Documents/Sympathy/build/CMakeFiles 0
+.PHONY : CMakeFiles/Sympathy.dir/rule
 
 # Convenience name for target.
-LS: CMakeFiles/LS.dir/rule
+Sympathy: CMakeFiles/Sympathy.dir/rule
 
-.PHONY : LS
-
-# clean rule for target.
-CMakeFiles/LS.dir/clean:
-	$(MAKE) -f CMakeFiles/LS.dir/build.make CMakeFiles/LS.dir/clean
-.PHONY : CMakeFiles/LS.dir/clean
+.PHONY : Sympathy
 
 # clean rule for target.
-clean: CMakeFiles/LS.dir/clean
+CMakeFiles/Sympathy.dir/clean:
+	$(MAKE) -f CMakeFiles/Sympathy.dir/build.make CMakeFiles/Sympathy.dir/clean
+.PHONY : CMakeFiles/Sympathy.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/Sympathy.dir/clean
 
 .PHONY : clean
 

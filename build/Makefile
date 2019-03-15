@@ -48,10 +48,10 @@ RM = "C:/Program Files/CMake/bin/cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:/Users/dell/Documents/LS
+CMAKE_SOURCE_DIR = C:/Users/dell/Documents/Sympathy
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:/Users/dell/Documents/LS/build
+CMAKE_BINARY_DIR = C:/Users/dell/Documents/Sympathy/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/dell/Documents/LS/build/CMakeFiles C:/Users/dell/Documents/LS/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/dell/Documents/Sympathy/build/CMakeFiles C:/Users/dell/Documents/Sympathy/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/dell/Documents/LS/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/dell/Documents/Sympathy/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named LS
+# Target rules for targets named Sympathy
 
 # Build rule for target.
-LS: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 LS
-.PHONY : LS
+Sympathy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Sympathy
+.PHONY : Sympathy
 
 # fast build rule for target.
-LS/fast:
-	$(MAKE) -f CMakeFiles/LS.dir/build.make CMakeFiles/LS.dir/build
-.PHONY : LS/fast
+Sympathy/fast:
+	$(MAKE) -f CMakeFiles/Sympathy.dir/build.make CMakeFiles/Sympathy.dir/build
+.PHONY : Sympathy/fast
 
-include/LS/Server/Server.obj: include/LS/Server/Server.cpp.obj
+include/Sympathy/Server/Server.obj: include/Sympathy/Server/Server.cpp.obj
 
-.PHONY : include/LS/Server/Server.obj
+.PHONY : include/Sympathy/Server/Server.obj
 
 # target to build an object file
-include/LS/Server/Server.cpp.obj:
-	$(MAKE) -f CMakeFiles/LS.dir/build.make CMakeFiles/LS.dir/include/LS/Server/Server.cpp.obj
-.PHONY : include/LS/Server/Server.cpp.obj
+include/Sympathy/Server/Server.cpp.obj:
+	$(MAKE) -f CMakeFiles/Sympathy.dir/build.make CMakeFiles/Sympathy.dir/include/Sympathy/Server/Server.cpp.obj
+.PHONY : include/Sympathy/Server/Server.cpp.obj
 
-include/LS/Server/Server.i: include/LS/Server/Server.cpp.i
+include/Sympathy/Server/Server.i: include/Sympathy/Server/Server.cpp.i
 
-.PHONY : include/LS/Server/Server.i
+.PHONY : include/Sympathy/Server/Server.i
 
 # target to preprocess a source file
-include/LS/Server/Server.cpp.i:
-	$(MAKE) -f CMakeFiles/LS.dir/build.make CMakeFiles/LS.dir/include/LS/Server/Server.cpp.i
-.PHONY : include/LS/Server/Server.cpp.i
+include/Sympathy/Server/Server.cpp.i:
+	$(MAKE) -f CMakeFiles/Sympathy.dir/build.make CMakeFiles/Sympathy.dir/include/Sympathy/Server/Server.cpp.i
+.PHONY : include/Sympathy/Server/Server.cpp.i
 
-include/LS/Server/Server.s: include/LS/Server/Server.cpp.s
+include/Sympathy/Server/Server.s: include/Sympathy/Server/Server.cpp.s
 
-.PHONY : include/LS/Server/Server.s
+.PHONY : include/Sympathy/Server/Server.s
 
 # target to generate assembly for a file
-include/LS/Server/Server.cpp.s:
-	$(MAKE) -f CMakeFiles/LS.dir/build.make CMakeFiles/LS.dir/include/LS/Server/Server.cpp.s
-.PHONY : include/LS/Server/Server.cpp.s
+include/Sympathy/Server/Server.cpp.s:
+	$(MAKE) -f CMakeFiles/Sympathy.dir/build.make CMakeFiles/Sympathy.dir/include/Sympathy/Server/Server.cpp.s
+.PHONY : include/Sympathy/Server/Server.cpp.s
 
 src/main.obj: src/main.cpp.obj
 
@@ -156,7 +156,7 @@ src/main.obj: src/main.cpp.obj
 
 # target to build an object file
 src/main.cpp.obj:
-	$(MAKE) -f CMakeFiles/LS.dir/build.make CMakeFiles/LS.dir/src/main.cpp.obj
+	$(MAKE) -f CMakeFiles/Sympathy.dir/build.make CMakeFiles/Sympathy.dir/src/main.cpp.obj
 .PHONY : src/main.cpp.obj
 
 src/main.i: src/main.cpp.i
@@ -165,7 +165,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/LS.dir/build.make CMakeFiles/LS.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/Sympathy.dir/build.make CMakeFiles/Sympathy.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -174,7 +174,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/LS.dir/build.make CMakeFiles/LS.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/Sympathy.dir/build.make CMakeFiles/Sympathy.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -183,12 +183,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... Sympathy"
 	@echo "... edit_cache"
-	@echo "... LS"
 	@echo "... rebuild_cache"
-	@echo "... include/LS/Server/Server.obj"
-	@echo "... include/LS/Server/Server.i"
-	@echo "... include/LS/Server/Server.s"
+	@echo "... include/Sympathy/Server/Server.obj"
+	@echo "... include/Sympathy/Server/Server.i"
+	@echo "... include/Sympathy/Server/Server.s"
 	@echo "... src/main.obj"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
