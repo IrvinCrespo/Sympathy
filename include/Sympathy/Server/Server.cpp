@@ -34,7 +34,9 @@ void Server::_config(){
     
 	sockid = socket(PF_INET,SOCK_DGRAM,IPPROTO_UDP);
 	if(sockid < 0){
+		#if	defined(_WIN32) || defined(_WIN64)
 		std::cout<<WSAGetLastError();
+		#endif
 	}
 	
 	client.sin_family = AF_INET;
@@ -66,13 +68,24 @@ void Server::_bind(){
 	
 	if(res < 0){
 		std::cout<<"Bind error, closing";
+		#if	defined(_WIN32) || defined(_WIN64)
 		closesocket(sockid);
+		#elif defined(__unix__)
+		close(sockid);
+		#endif
 	}
 	
 	while(1){
 		memset(buffer,0,sizeof buffer);
 		std::cout<<"Binding\n";
-		int count = recvfrom(sockid,buffer,sizebuffer,0,(struct sockaddr *) &clientAddr, &i);
+		#if	defined(_WIN32) || defined(_WIN64)
+		int count;
+		#elif defined(__unix__)
+		ssize_t count;
+		#endif
+		
+
+		count = recvfrom(sockid,buffer,sizebuffer,0,(struct sockaddr *) &clientAddr, &i);
 		#if	defined(_WIN32) || defined(_WIN64)
 			if(count < 0){
 				std::cout<<WSAGetLastError();
@@ -84,8 +97,9 @@ void Server::_bind(){
 		sendto(sockid,buffer_s,sizeof(buffer_s),0,(struct sockaddr *)&clientAddr, i);
 		
 	}
-	
+	#if	defined(_WIN32) || defined(_WIN64)
 	WSACleanup();
+	#endif
 }
 
 
