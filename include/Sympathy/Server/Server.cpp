@@ -83,13 +83,15 @@ void Server::_bind(){
 	while(1){
 		memset(buffer,0,sizeof buffer);
 		std::cout<<"Binding\n";
-		#if	defined(_WIN32) || defined(_WIN64)
+		auto count = recvfrom(sockid,buffer,sizebuffer,0,(struct sockaddr *) &clientAddr, &i);
+
+		/*#if	defined(_WIN32) || defined(_WIN64)
 		int count;
-		count = recvfrom(sockid,buffer,sizebuffer,0,(struct sockaddr *) &clientAddr, &i);
+		auto count = recvfrom(sockid,buffer,sizebuffer,0,(struct sockaddr *) &clientAddr, &i);
 		#elif defined(__unix__)
 		ssize_t count;
-		count = recvfrom(sockid,buffer,sizebuffer,0,(struct sockaddr *) &clientAddr, &i);
-		#endif
+		auto count = recvfrom(sockid,buffer,sizebuffer,0,(struct sockaddr *) &clientAddr, &i);
+		#endif*/
 		
 		#if	defined(_WIN32) || defined(_WIN64)
 			if(count < 0){
