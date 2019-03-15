@@ -63,8 +63,13 @@ void Server::_bind(){
 	
 	//std::cout<<sizeof(buffer);
 	struct sockaddr_in clientAddr;
-	
+	#if	defined(_WIN32) || defined(_WIN64)
 	int i = sizeof(clientAddr);
+	#elif defined(__unix__)
+	socklen_t i;
+	#endif
+	
+	
 	
 	if(res < 0){
 		std::cout<<"Bind error, closing";
@@ -80,12 +85,12 @@ void Server::_bind(){
 		std::cout<<"Binding\n";
 		#if	defined(_WIN32) || defined(_WIN64)
 		int count;
+		count = recvfrom(sockid,buffer,sizebuffer,0,(struct sockaddr *) &clientAddr, &i);
 		#elif defined(__unix__)
 		ssize_t count;
+		count = recvfrom(sockid,buffer,sizebuffer,0,(struct sockaddr *) &clientAddr, &i);
 		#endif
 		
-
-		count = recvfrom(sockid,buffer,sizebuffer,0,(struct sockaddr *) &clientAddr, &i);
 		#if	defined(_WIN32) || defined(_WIN64)
 			if(count < 0){
 				std::cout<<WSAGetLastError();
