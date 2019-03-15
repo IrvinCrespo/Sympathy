@@ -1,3 +1,0 @@
-C:/Users/dell/Documents/Sympathy/build/CMakeFiles/Sympathy.dir
-C:/Users/dell/Documents/Sympathy/build/CMakeFiles/edit_cache.dir
-C:/Users/dell/Documents/Sympathy/build/CMakeFiles/rebuild_cache.dir
