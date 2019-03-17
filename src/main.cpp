@@ -7,10 +7,11 @@ using namespace std;
 int main() {
 	
 	Server serv(TCP);
-	serv._config();
+	serv.config();
 
+	//future<void> f = async(std::launch::async,&Server::bindC,&serv);
+	//serv.bindC();
 	future<void> f = async(std::launch::async,&Server::bindC,&serv);
-	
 	getchar();
 	system("pause");
 	return 0;

@@ -18,6 +18,7 @@ include_directories(./include ./include/${CMAKE_PROJECT_NAME} ./src)
 add_executable( ${CMAKE_PROJECT_NAME} 
 ./src/main.cpp 
 ./include/${CMAKE_PROJECT_NAME}/Server/Server.cpp
+./include/${CMAKE_PROJECT_NAME}/Client.cpp
 )
 
 if(WIN32)

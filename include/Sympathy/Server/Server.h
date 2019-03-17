@@ -1,6 +1,7 @@
 #ifndef SERVER_H
 #define SERVER_H
 #include <iostream>
+#include <vector>
 #include <future>
 #include "../Client.h"
 
@@ -8,6 +9,7 @@
 	#include <winsock2.h>
 	#include "winsock2.h"
 	#include <windows.h>
+	#include <cstring>
 #elif defined(__unix__)
 	#define _BSD_SOURCE
 	#include <arpa/inet.h>
@@ -29,24 +31,23 @@ class Server
 		void _configureTCP();
 		void _configureUDP();
 		void _close_socket();
-
-		template<int, typename S, char[], typename SS>
-		void _bindTCP(int,S,char[],SS);
-
-		template<int, typename S, char[], typename SS>
-		void _bindUDP(int,S,char[],SS);
+		void _recv(int);
+		void _recvfrom();
 
 		
-		
+		void _bindTCP(int);	
+		void _bindUDP(int);
+
 	public:
-		
+
 		Server();
 		Server(SOCKTYPE TYPE);
 		~Server();
 		void config();
+		void accepter();
 		void bindC();
 		void bindAsync();
-		
+		void _broadcast(char*);
 		SOCKTYPE TYPE;
 		std::vector<Client> clients;
 
